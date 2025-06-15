@@ -1,13 +1,8 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: Location
 metadata:
-  name: my-service
-  description: My demo service
+  name: org-groups
+  description: Contains group entities for the organization
 spec:
-  type: service
-  lifecycle: production
-  owner: group:default/team-a
-  providesApis:
-    - api:default/my-api
-  dependsOn:
-    - resource:default/my-database
+  type: url
+  target: https://github.com/deepthi-28/testbackstage/group.yaml
