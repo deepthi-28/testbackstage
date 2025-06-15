@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
   name: org-groups
-  description: Contains group entities for the organization
+  description: Group entities for the catalog
 spec:
-  type: url
-  target: https://github.com/deepthi-28/testbackstage/group.yaml
+  type: file
+  target: ./group.yaml
