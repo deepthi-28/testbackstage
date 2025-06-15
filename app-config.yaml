@@ -1,0 +1,50 @@
+app:
+  title: My Backstage App
+  baseUrl: http://localhost:3000
+
+organization:
+  name: My Company
+
+backend:
+  baseUrl: http://localhost:7007
+  listen:
+    port: 7007
+  cors:
+    origin: http://localhost:3000
+    methods: [GET, POST, PUT, DELETE]
+  csp:
+    connect-src: ["'self'", "http:", "https:"]
+
+catalog:
+  rules:
+    - allow:
+        - Component
+        - Group
+        - User
+        - API
+        - System
+        - Resource
+        - Location
+  locations:
+    - type: file
+      target: ./catalog-info.yaml
+
+integrations:
+  github:
+    - host: github.com
+      token: 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 # Use environment variable instead of hardcoding
+
+auth:
+  environment: development
+  providers:
+    github:
+      development:
+        clientId: Ov23li9DGMWaLzgsZLP1      # 👈 Use environment variable
+        clientSecret: a5f00c40cfab9636ee0b6381afb048593d996862
+
+techdocs:
+  builder: 'local'
+  generator:
+    runIn: 'docker'
+  publisher:
+    type: 'local'
