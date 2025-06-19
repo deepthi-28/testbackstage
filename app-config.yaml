@@ -32,15 +32,15 @@ catalog:
 integrations:
   github:
     - host: github.com
-      token: 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 # Use environment variable instead of hardcoding
+      token: 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 # Use environment variable instead of hardcoding
 
 auth:
   environment: development
   providers:
     github:
       development:
-        clientId: Ov23li9DGMWaLzgsZLP1      # 👈 Use environment variable
-        clientSecret: a5f00c40cfab9636ee0b6381afb048593d996862
+        clientId: Ov23liC0Iq13N0VB4Tkn      # 👈 Use environment variable
+        clientSecret: c2c13ce7e7aa3021921b96586111cbb6c4afb1a1
 
 techdocs:
   builder: 'local'
